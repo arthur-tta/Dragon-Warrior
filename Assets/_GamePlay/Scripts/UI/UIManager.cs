@@ -6,12 +6,20 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScene;
+    [SerializeField] private GameObject newGameScene;
 
     private void Awake()
     {
         gameOverScene.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
+    }
 
     // Active game over screne
     public void GameOver()
@@ -37,4 +45,20 @@ public class UIManager : MonoBehaviour
 
         UnityEditor.EditorApplication.isPlaying = false; // dung trinh editor unity
     }
+
+
+    // new game menu
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
+    // end game menu
+
+    public void RePlay()
+    {
+        SceneManager.LoadScene(1);
+    }
+   
 }

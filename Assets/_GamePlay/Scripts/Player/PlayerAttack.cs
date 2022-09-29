@@ -40,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
         {
             animator.SetTrigger("attack");
             attackCounter = 0;
+            Debug.Log("attack");
         }
         if(Input.GetAxisRaw("Horizontal") != 0)
         {

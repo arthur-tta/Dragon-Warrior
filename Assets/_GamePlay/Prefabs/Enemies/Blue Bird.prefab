@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 1598747970329025843}
   - component: {fileID: 1598747970329025842}
   - component: {fileID: 1598747970329025841}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Blue Bird
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 62666135
+  m_SortingLayerID: -280274159
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 6570920502705930198, guid: 9f8778d0d44049a459735824f24042e0, type: 3}
@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27181dc3374f0ef4db499ee395f9cb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolCooldown: 2
 --- !u!114 &1598747970329025841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,4 +303,4 @@ MonoBehaviour:
   waypoint:
   - {fileID: 1598747968802532315}
   - {fileID: 1598747968365581779}
-  speed: 2
+  speed: 5

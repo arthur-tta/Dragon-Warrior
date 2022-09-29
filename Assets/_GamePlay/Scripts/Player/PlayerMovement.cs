@@ -26,11 +26,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
 
     private Rigidbody2D rigidbody2D;
+    private int countJump;
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
 
-    private void Start()
+    private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -43,11 +44,21 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rigidbody2D.velocity = new Vector2(dirX * speed, rigidbody2D.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && isGrounded())
+        if(isGrounded())
+        {
+            countJump = 2;
+        }
+
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow)) && countJump > 0)
         {
             jumpSoundEffect.Play();
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
-        }
+            countJump--;
+        }//else if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow)) && countJump == 0 && isGrounded()) 
+        //{
+        //    jumpSoundEffect.Play();
+        //    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
+        //}
 
 
         UpdateAnimationState();

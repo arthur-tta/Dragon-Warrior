@@ -27,9 +27,9 @@ public class SelectionArrow : MonoBehaviour
         }
 
         // chon option
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ChangePostion(1);
+            Interact();
         }
     }
 

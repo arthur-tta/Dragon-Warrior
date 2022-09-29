@@ -10,15 +10,16 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private AudioSource deathSoundEffect;
     [SerializeField] private int health = 3;
     [SerializeField] private Text healthText;
-    [SerializeField] private GameObject panel;
 
 
+    private UIManager uIManager;
     private Vector3 respawnPostion;
     private bool isDie;
 
 
-    private void Start()
+    private void Awake()
     {
+        uIManager = FindObjectOfType<UIManager>();
         animator = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         respawnPostion = transform.position;
@@ -58,8 +59,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (health == 1)
         {
-            Debug.Log("hey!");
-            panel.SetActive(true);
+            uIManager.GameOver();
         }
         else
         {

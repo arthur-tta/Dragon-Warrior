@@ -6,6 +6,7 @@ public class ItemCollector : MonoBehaviour
     private int score = 0;
 
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text yourScore;
     [SerializeField] private AudioSource collectSoundEffect ;
 
 
@@ -14,10 +15,11 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Fruit"))
         {
             Destroy(collision.gameObject);
-            score++;
+            score += 10;
             collectSoundEffect.Play();
 
             scoreText.text = "Score: " + score;
+            yourScore.text = "YOUR SCORE: " + score;
         }
     }
 }
