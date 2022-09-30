@@ -200,7 +200,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 916194433
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &2243959
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 1239430468}
   - component: {fileID: 1239430467}
   m_Layer: 5
-  m_Name: Play
+  m_Name: RePlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1403952542}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: RePlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

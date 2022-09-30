@@ -1,1 +1,2 @@
-
+- Đây là sản phẩm cuối cùng trong môn Project 2 của mình
+- Sản phẩm là một game 2D Casual
