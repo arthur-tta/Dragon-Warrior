@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit(); // hoat dong khi build thanh sp
 
-        UnityEditor.EditorApplication.isPlaying = false; // dung trinh editor unity
+        //UnityEditor.EditorApplication.isPlaying = false; // dung trinh editor unity
     }
 
 

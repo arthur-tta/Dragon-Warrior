@@ -30,7 +30,7 @@ public class Rino : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(PlayerInSight());
+        //Debug.Log(PlayerInSight());
         if (!angry)
         {
             animator.SetTrigger("idle");
